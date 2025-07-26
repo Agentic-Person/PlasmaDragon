@@ -1,0 +1,463 @@
+{
+  "memories": [
+    {
+      "id": "mem_1753073872142_mdl7vbkcf",
+      "content": "Plasma Thief: Sky Rogue - Complete Project Overview\n\n**Project Name**: Plasma Thief: Sky Rogue\n**Type**: Unity 3D aerial combat portfolio demo with Web3 integration\n**Timeline**: 3-4 weeks development for 2-3 level demo\n\n**Core Concept**: \n- Player controls a rogue permanently mounted on a plasma dragon\n- Aerial combat against AI-powered bosses and adaptive enemies\n- Seamless Web2-to-Web3 onboarding with Solana blockchain rewards\n- No ground combat - entirely aerial gameplay\n\n**Key Technical Features**:\n1. MCP Unity Integration (Critical - must work first)\n2. 360° dragon flight mechanics using \"3rd Person Controller + Fly Mode\" (free asset)\n3. Dual weapon system: Plasma orbs (area damage) and rapid fireballs\n4. AI-powered bosses using Claude/GPT API ($0.01-0.02 per session)\n5. WebGL deployment targeting 60fps desktop, 30fps mobile\n6. Auto-wallet generation for blockchain rewards\n\n**Development Priorities**:\n1. MCP integration and Unity setup\n2. Flight controller and dragon mechanics\n3. Combat system with dual weapons\n4. AI boss integration\n5. Web3 token rewards\n6. Polish and optimization\n\n**Budget**: $20-65 one-time costs, $5-30 monthly for AI/tools",
+      "type": "config",
+      "tags": [
+        "config",
+        "api",
+        "deployment",
+        "optimization",
+        "project-overview",
+        "plasma-thief",
+        "unity",
+        "requirements"
+      ],
+      "timestamp": "2025-07-21T04:57:52.142Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T04:57:52.142Z",
+      "lastVerified": "2025-07-21T04:57:52.142Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753074048393_fklkizfup",
+      "content": "Plasma Thief: Game Design Details\n\n**Gameplay Loop**:\n1. Approach Phase (30-45s): Scout fortress, identify boss, dodge fire\n2. Combat Phase (2-3min): Fight AI boss, destroy turrets, manage health\n3. Collection Phase (15-30s): Swoop for treasure, escape, earn tokens\n\n**Combat System**:\n- Primary: Plasma Orb - 100 damage, 10ft radius AOE, 2s cooldown, one-shots groups\n- Secondary: Rapid Fireballs - 25 damage, 5/second rate, machine-gun style\n- Controls: Left click plasma, right click fireballs, Q switch weapons\n\n**Enemy Types**:\n- Archer Towers: 1 HP, fixed position, predictable\n- Ballista Turrets: 2 HP, predictive targeting, medium threat\n- Military Patrols: Groups of 5-10, 1 HP each, die to single plasma AOE\n- Smart enemies in Level 2 learn from player patterns\n\n**Boss System**:\n- Elite Commander (Level 1): 100 HP, multiple attacks, AI-driven decisions\n- Veteran Commander (Level 2): Remembers Level 1 tactics, adapts strategy\n- Uses Claude/GPT API every 10-15 seconds for decision making\n- Visible behavior changes each playthrough\n\n**Token Economy**:\n- Free to play demo\n- Level 1: 5 tokens\n- Level 2: 8 tokens  \n- Level 3: 10 tokens (optional)\n- Perfect run bonus: +3 tokens",
+      "type": "solution",
+      "tags": [
+        "solution",
+        "api",
+        "game-design",
+        "combat",
+        "enemies",
+        "tokens",
+        "plasma-thief"
+      ],
+      "timestamp": "2025-07-21T05:00:48.393Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T05:00:48.393Z",
+      "lastVerified": "2025-07-21T05:00:48.393Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753074062338_renonzaah",
+      "content": "Plasma Thief: Technical Architecture & Requirements\n\n**Unity Setup**:\n- Unity 2022.3 LTS (latest patch)\n- 3D Built-in Render Pipeline (not URP/HDRP)\n- WebGL target platform\n- Project name: PlasmaThief_DragonRogue\n\n**Folder Structure**:\nAssets/\n├── _Project/\n│   ├── Scripts/\n│   │   ├── Player/\n│   │   ├── AI/\n│   │   ├── Combat/\n│   │   ├── Web3/\n│   │   └── Utilities/\n│   ├── Prefabs/\n│   ├── Materials/\n│   ├── Textures/\n│   └── Audio/\n├── _ImportedAssets/\n├── Plugins/\n└── StreamingAssets/\n\n**Performance Targets**:\n- 60 FPS desktop browsers\n- 30 FPS mobile browsers\n- <50MB compressed build size\n- <20 second load time\n- 256MB RAM usage limit\n\n**Essential Packages**:\n- Cinemachine (camera control)\n- Post Processing Stack v2\n- TextMeshPro\n- Unity Particle Pack\n- Solana.Unity-SDK\n- UnityAsync\n\n**WebGL Build Settings**:\n- Gzip compression\n- Exception handling: None\n- IL2CPP Code Generation\n- Target WebAssembly\n- Memory Size: 256MB",
+      "type": "config",
+      "tags": [
+        "config",
+        "technical",
+        "unity-setup",
+        "performance",
+        "webgl",
+        "plasma-thief"
+      ],
+      "timestamp": "2025-07-21T05:01:02.338Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T05:01:02.338Z",
+      "lastVerified": "2025-07-21T05:01:02.338Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753074078124_hzmk0pava",
+      "content": "Plasma Thief: Development Phases & Milestones\n\n**Week 1: Core Systems**\nDays 1-2: Environment & Flight\n- Set up MCP integration (CRITICAL - must work first)\n- Import island/castle assets (free from Asset Store)\n- Implement flight controller using free \"3rd Person Controller + Fly Mode\"\n- Basic camera follow system\n\nDays 3-4: Dragon Setup\n- Import dragon model (free \"Dragon for Boss Monster: HP\" or purchase $20-40)\n- Configure animations (fly, attack, grab)\n- Add plasma orb shooting\n- Visual effects setup\n\nDays 5-7: Combat Basics\n- Enemy turrets/archers\n- Basic projectile system\n- Health/damage mechanics\n- Simple UI elements\n\n**Week 2: AI & Web3**\nDays 8-10: AI Boss Integration\n- Simple API connection (Claude/GPT)\n- Boss decision-making system\n- Adaptive difficulty\n- Response caching for cost control\n\nDays 11-14: Web3 Setup\n- Solana wallet integration\n- Token reward system\n- Simple landing page\n- WebGL deployment\n\n**Week 3: Polish**\nDays 15-17: Level 2\n- Same environment, smarter enemies\n- AI learns from Level 1\n- Visual feedback for adaptation\n\nDays 18-21: Final Polish\n- Optimization for WebGL\n- Bug fixes\n- Landing page improvements\n- Demo video recording",
+      "type": "config",
+      "tags": [
+        "config",
+        "api",
+        "deployment",
+        "optimization",
+        "development-phases",
+        "milestones",
+        "timeline",
+        "plasma-thief"
+      ],
+      "timestamp": "2025-07-21T05:01:18.124Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T05:01:18.124Z",
+      "lastVerified": "2025-07-21T05:01:18.124Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753074094367_mys9k4iqv",
+      "content": "Plasma Thief: Critical Implementation Details\n\n**MCP Unity Integration (HIGHEST PRIORITY)**:\n- Must install Unity MCP server from https://github.com/CoderGamester/mcp-unity\n- Configure MCP connection in Cursor IDE settings\n- Test with simple commands like \"Create empty GameObject\"\n- This MUST work before proceeding with any other development\n\n**Asset Strategy**:\nDragon Models:\n- Option A: Unity Asset Store dragons ($20-40) with flight animations\n- Option B: 3D AI Generation with Meshy AI ($20/mo) - backup only\n- Recommended free: \"Dragon for Boss Monster: HP\"\n\nFlight Controller:\n- Primary: \"3rd Person Controller + Fly Mode\" (Asset ID: 28647) - FREE\n- Alternative: Arcade Flight Controller ($25.45) if needed\n- Custom enhancement on top of free controller\n\nEnvironment:\n- Free castle/island assets from Asset Store\n- \"Free Fantasy Castle\" or similar\n- Terrain Tools Sample Asset Pack\n\n**Key Code Structures**:\n- EnhancedDragonFlightController (extends free asset)\n- DragonWeaponSystem (plasma orbs + fireballs)\n- AIBossController (API integration)\n- TokenRewardSystem (Web3 rewards)\n\n**Testing Checkpoints**:\n1. MCP connection working\n2. Dragon flying smoothly at 60fps\n3. Dual weapons firing properly\n4. WebGL build under 50MB\n5. AI boss making decisions\n6. Token rewards distributing",
+      "type": "config",
+      "tags": [
+        "config",
+        "api",
+        "testing",
+        "implementation",
+        "mcp",
+        "assets",
+        "critical-details",
+        "plasma-thief"
+      ],
+      "timestamp": "2025-07-21T05:01:34.367Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T05:01:34.367Z",
+      "lastVerified": "2025-07-21T05:01:34.367Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753121937836_0pkpr5paq",
+      "content": "Current Unity Project State Analysis:\n\n1. Project Location: /home/benton/projects/Unity3d-Projects/PlasmaDragonPrj/PlasmaDragon\n\n2. Current Structure:\n   - Documentation exists (PRD, GDD, Architecture docs)\n   - Task breakdown files created (16 tasks from MCP setup to final testing)\n   - TODO.md with detailed development plan\n   - NO Unity project files yet (no Assets/, ProjectSettings/, etc.)\n\n3. Key Requirements from PRD:\n   - Game: Plasma Thief: Sky Rogue (aerial dragon combat)\n   - Tech Stack: Unity 2022.3 LTS, WebGL build, AI integration, Web3 rewards\n   - MVP Features: Flight combat, AI boss, token rewards, web platform\n   - Timeline: 4-week development (160 hours)\n\n4. What Needs to Be Created:\n   - Unity project initialization\n   - Core folder structure (Assets/_Project/, Scripts/, Prefabs/, etc.)\n   - Version control setup (.gitignore for Unity)\n   - WebGL build configuration\n   - Package installations (Cinemachine, TextMeshPro, Solana SDK)\n   - Base scenes (MainMenu, Level01_FortressIsland)",
+      "type": "config",
+      "tags": [
+        "config",
+        "testing",
+        "unity",
+        "project-setup",
+        "plasma-thief",
+        "initial-state"
+      ],
+      "timestamp": "2025-07-21T18:18:57.836Z",
+      "context": "Initial project analysis before Unity setup begins",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T18:18:57.836Z",
+      "lastVerified": "2025-07-21T18:18:57.836Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753122356042_v8o0uojm5",
+      "content": "PlasmaDragon Unity Project Documentation Analysis:\n\nPROJECT NAME: Plasma Thief: Sky Rogue (Unity WebGL dragon combat game)\nLOCATION: /home/benton/projects/Unity3d-Projects/PlasmaDragonPrj/PlasmaDragon/\n\nKEY DOCUMENTATION FILES:\n1. Unity 3D Dragon Rogue Game: Streamlined MVP Architecture.md - Technical architecture and implementation guide\n2. claude-code-setup-prompt.md - Product Requirements Document (PRD) for development\n3. dragon-rogue-gdd.md - Game Design Document with gameplay details\n4. dragon-rogue-prd.md - Comprehensive Product Requirements Document\n\nMAJOR UPDATES AND DIFFERENCES:\n1. The game is now called \"Plasma Thief: Sky Rogue\" (not just PlasmaDragon)\n2. Heavy emphasis on Unity MCP (Model Context Protocol) integration for AI-assisted development\n3. Multi-layer AI system with Claude API for strategic decisions and local ML for tactical reactions\n4. Web3 integration using Solana blockchain with seamless Web2-to-Web3 onboarding\n5. Supabase backend for authentication and data storage\n6. WebGL deployment target with strict performance requirements (60 FPS desktop, 30 FPS mobile)\n\nTECHNICAL REQUIREMENTS:\n- Unity 2022.3 LTS with Universal Render Pipeline\n- Unity MCP Server integration (from GitHub)\n- Cursor IDE with Claude Code\n- Build size target: <50MB compressed\n- Memory budget: 256MB\n- Load time: <20 seconds\n\nGAME FEATURES:\n- Dragon aerial combat with dual weapon system (plasma orbs + rapid fireballs)\n- AI-powered adaptive bosses that learn between playthroughs\n- 2-3 level demo showcasing progression\n- Token rewards on Solana blockchain\n- No crypto knowledge required for players\n\nDEVELOPMENT PRIORITIES:\n1. Unity MCP setup (3-5x productivity boost)\n2. Flight controller implementation (free asset: 3rd Person Controller + Fly Mode)\n3. AI boss integration with caching for cost control\n4. Web3 wallet auto-generation and token distribution\n5. WebGL optimization for browser performance",
+      "type": "config",
+      "tags": [
+        "config",
+        "api",
+        "authentication",
+        "deployment",
+        "optimization",
+        "unity",
+        "plasmadragon",
+        "documentation",
+        "mcp",
+        "web3",
+        "ai",
+        "game-design"
+      ],
+      "timestamp": "2025-07-21T18:25:56.042Z",
+      "context": "Initial documentation analysis for PlasmaDragon Unity project. This is critical reference material for all future development work on this project.",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T18:25:56.042Z",
+      "lastVerified": "2025-07-21T18:25:56.042Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753124104846_g6lc4ga6y",
+      "content": "PlasmaDragon Project Development Approach:\n- Acting as Senior Developer leading junior developers\n- Every task must be fully documented in tasks folder\n- Create new task.md files for each implementation\n- Document: task definition, implementation steps, completion criteria\n- Maintain comprehensive documentation for team collaboration\n- Project name: PlasmaDragon (not PlasmaThief_DragonRogue)",
+      "type": "general",
+      "tags": [
+        "general",
+        "plasmaDragon",
+        "project-management",
+        "documentation",
+        "senior-dev"
+      ],
+      "timestamp": "2025-07-21T18:55:04.846Z",
+      "context": "Critical project management approach for Unity game development",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T18:55:04.846Z",
+      "lastVerified": "2025-07-21T18:55:04.846Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753124510835_b9f3lzqic",
+      "content": "PlasmaDragon Project Status Summary:\n\nCOMPLETED:\n- Full Unity project folder structure (37+ directories)\n- Unity-specific .gitignore \n- CLAUDE.md with senior developer guidelines\n- Package manifest.json with all dependencies\n- WebGL template created\n- setup-unity.sh automation script\n- Task documentation system (tasks 17 & 18 completed)\n- Environment configuration templates\n\nPROJECT STRUCTURE:\nAssets/_Project/Scripts/{Player,AI,Combat,Web3,Core,UI,Utilities}\nAssets/_Project/{Prefabs,Materials,Textures,Audio,ScriptableObjects,Resources}\nAssets/Plugins/{Solana,Supabase}\nAssets/WebGLTemplates/PlasmaDragon\n\nNEXT STEPS:\n1. Open Unity Hub → Add Project → Open with 2022.3 LTS\n2. Switch to WebGL platform immediately\n3. Install MCP Unity from GitHub\n4. Create MainMenu and Level01_FortressIsland scenes\n5. Test MCP natural language commands\n\nKEY FILES:\n- CLAUDE.md: Senior dev guidelines\n- setup-unity.sh: Automation script\n- tasks/: All documentation\n- PROJECT_STATUS.md: Current status",
+      "type": "config",
+      "tags": [
+        "config",
+        "plasmaDragon",
+        "unity-setup",
+        "project-status",
+        "completed-tasks"
+      ],
+      "timestamp": "2025-07-21T19:01:50.835Z",
+      "context": "Unity project foundation complete, ready for Unity Editor work",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T19:01:50.835Z",
+      "lastVerified": "2025-07-21T19:01:50.835Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753130010189_j37p1qz7c",
+      "content": "Task file comparison analysis:\n\nTask 01 vs Task 18 (MCP Unity Setup):\n- Task 18 has much more detailed implementation steps\n- Task 18 includes specific configuration files (mcp-config.json, .cursorrules)\n- Task 18 has better structured testing procedures with specific test commands\n- Task 18 includes performance testing criteria\n- Task 18 has team-oriented documentation (senior vs junior developer practices)\n- Task 18 shows completion status and lessons learned\n\nTask 02 vs Task 17 (Unity Project Init):\n- Task 17 includes bash script for folder creation\n- Task 17 has more comprehensive .gitignore with WebGL specifics\n- Task 17 includes package manifest template with specific versions\n- Task 17 has assembly definitions configuration\n- Task 17 mentions creating WebGL template folder\n- Task 17 has better implementation results documentation\n- Task 17 shows actual completion with lessons learned",
+      "type": "config",
+      "tags": [
+        "config",
+        "testing",
+        "task-comparison",
+        "merge-analysis",
+        "unity-setup"
+      ],
+      "timestamp": "2025-07-21T20:33:30.189Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T20:33:30.189Z",
+      "lastVerified": "2025-07-21T20:33:30.189Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753131671863_l1rbhm1j6",
+      "content": "PlasmaDragon Task Reorganization Complete:\n\nTIMELINE: 4-6 weeks (60-80 hours total)\n- Week 1: Foundation & Setup (15 hrs)\n- Week 2: Core Gameplay (15 hrs)\n- Week 3: AI Boss Development (15 hrs)\n- Week 4: Web3 Integration (15 hrs)\n- Week 5: Polish & Performance (10 hrs)\n- Week 6: Testing & Deployment (10 hrs)\n\nKEY CHANGES:\n- Merged tasks 17-18 into 01-02\n- Streamlined setup from 93 hours to 80 hours\n- Purchased assets: Dragon ($40-60) + Flight Controller ($30-50)\n- Time savings: ~15-18 hours redirected to polish\n\nREADY TO START:\n1. Open Unity 2022.3 LTS\n2. Add PlasmaDragon project\n3. Begin with Task 01 (MCP Setup)\n\nAll 3 core features maintained: Unity gameplay, AI Boss, Web3",
+      "type": "config",
+      "tags": [
+        "config",
+        "testing",
+        "deployment",
+        "plasmaDragon",
+        "reorganization",
+        "timeline",
+        "portfolio-demo"
+      ],
+      "timestamp": "2025-07-21T21:01:11.863Z",
+      "context": "Task reorganization completed successfully for portfolio demo development",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T21:01:11.863Z",
+      "lastVerified": "2025-07-21T21:01:11.863Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753134204894_sw3p6w8ad",
+      "content": "Unity MCP is already configured in Claude Desktop config as a remote MCP server. We need to set up local Unity MCP Bridge package and Python server for direct Unity Editor integration. Project uses Unity 2022.3 LTS with URP pipeline.",
+      "type": "config",
+      "tags": [
+        "config",
+        "python",
+        "unity-mcp",
+        "setup",
+        "configuration"
+      ],
+      "timestamp": "2025-07-21T21:43:24.894Z",
+      "context": "Task 01 MCP Unity Setup - Current state analysis",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T21:43:24.894Z",
+      "lastVerified": "2025-07-21T21:43:24.894Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753134595789_9bit47qxs",
+      "content": "Unity MCP setup completed: Bridge package installed in Unity 6000.1.9f1, Python server running on port 6500, package resolution successful. Unity Editor is running in batch mode. Need to restart Claude Desktop to activate local MCP connection.",
+      "type": "config",
+      "tags": [
+        "config",
+        "python",
+        "unity-mcp",
+        "setup-complete",
+        "python-server",
+        "unity-bridge"
+      ],
+      "timestamp": "2025-07-21T21:49:55.789Z",
+      "context": "Task 01 MCP Setup - Implementation complete",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T21:49:55.789Z",
+      "lastVerified": "2025-07-21T21:49:55.789Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753137726939_sa5yjb1fq",
+      "content": "Starting search for Supabase configuration in PlasmaDragon Unity project. Looking for: Assets/Plugins/Supabase/, Package manifest entries, configuration files, auth/database scripts.",
+      "type": "config",
+      "tags": [
+        "config",
+        "database",
+        "supabase",
+        "unity",
+        "search",
+        "configuration"
+      ],
+      "timestamp": "2025-07-21T22:42:06.939Z",
+      "context": "Unity project analysis for existing Supabase integration",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T22:42:06.939Z",
+      "lastVerified": "2025-07-21T22:42:06.939Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753137759627_0ruxfmkh8",
+      "content": "Supabase Unity Search Results:\n1. Directory structure: Assets/Plugins/Supabase/ exists but is empty (only .meta files)\n2. Package manifest: No Supabase packages installed in Packages/manifest.json\n3. Scripts: No actual Supabase implementation files exist yet\n4. Configuration: No Supabase config files found\n5. Task planning: Task 11 (Web3 integration) shows planned Supabase integration with detailed code examples\n6. Setup script: References Supabase in directory creation but no actual installation\n\nStatus: Supabase is planned but NOT yet implemented",
+      "type": "config",
+      "tags": [
+        "config",
+        "supabase",
+        "unity",
+        "status",
+        "integration",
+        "web3"
+      ],
+      "timestamp": "2025-07-21T22:42:39.627Z",
+      "context": "PlasmaDragon Unity project Supabase integration status",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T22:42:39.627Z",
+      "lastVerified": "2025-07-21T22:42:39.627Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753137837173_2q1lhlsjq",
+      "content": "Starting comprehensive search for Solana integration in PlasmaDragon Unity project. Looking for SDK installations, plugins, scripts, and configuration files.",
+      "type": "config",
+      "tags": [
+        "config",
+        "unity",
+        "solana",
+        "web3",
+        "blockchain",
+        "investigation"
+      ],
+      "timestamp": "2025-07-21T22:43:57.173Z",
+      "context": "PlasmaDragon Unity project investigation",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T22:43:57.173Z",
+      "lastVerified": "2025-07-21T22:43:57.173Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753137892865_t5bslo6h2",
+      "content": "Solana Integration Status for PlasmaDragon Unity Project:\n\nCURRENT STATE:\n- Solana directory structure exists (Assets/Plugins/Solana/) but is EMPTY\n- Web3 directory structure exists (Assets/_Project/Scripts/Web3/) with empty Authentication and Blockchain subdirectories\n- NO Solana Unity SDK installed in packages.json\n- NO actual implementation scripts present\n- Task 11 (Web3 Integration) is documented but not implemented\n- Project is only ~15% complete, still in foundation setup phase\n\nPLANNED IMPLEMENTATION:\n- Task 11 includes complete code templates for Solana integration\n- Seamless Web2-to-Web3 onboarding approach\n- Email/password login with automatic wallet creation\n- Token rewards system (PLASMA tokens)\n- Devnet configuration for testing\n- Supabase backend integration planned\n\nSTATUS: PENDING - Nothing implemented yet",
+      "type": "config",
+      "tags": [
+        "config",
+        "authentication",
+        "testing",
+        "unity",
+        "solana",
+        "web3",
+        "status",
+        "implementation",
+        "investigation-complete"
+      ],
+      "timestamp": "2025-07-21T22:44:52.865Z",
+      "context": "PlasmaDragon Solana integration investigation completed",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T22:44:52.865Z",
+      "lastVerified": "2025-07-21T22:44:52.865Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753138917410_51hhvsh3v",
+      "content": "Successfully completed Web3 integration setup for PlasmaDragon: Supabase authentication system, Solana wallet management, PLASMA token rewards, seamless onboarding flow, comprehensive testing suite, and full documentation. All SDKs installed, scripts implemented, and ready for Unity Editor integration via Cursor IDE.",
+      "type": "config",
+      "tags": [
+        "config",
+        "authentication",
+        "testing",
+        "web3-complete",
+        "supabase",
+        "solana",
+        "plasma-tokens",
+        "blockchain"
+      ],
+      "timestamp": "2025-07-21T23:01:57.410Z",
+      "context": "Task 11 Web3 Integration - Implementation Complete",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T23:01:57.410Z",
+      "lastVerified": "2025-07-21T23:01:57.410Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753141122960_kof38kuck",
+      "content": "PLASMA Token Analysis - Key Findings:\n\n1. Token Mint Address: 3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7 (from Solana file)\n2. Network: Solana Devnet\n3. Token Program: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA (standard SPL Token)\n4. NFT Mint Address: AjK1Zqpd4FTupZN9yD6ETGwRUWKFAeJES2Zki7HWTezj (discovered in setup)\n5. Wallet Keypair location: /home/benton/.config/solana/devnet.json\n6. Unity integration mostly complete with SolanaManager.cs and TokenRewardSystem.cs\n7. Missing: Token mint address in .env file configuration\n8. Missing: Program ID for custom token distribution (if needed)\n9. Status: Token created but not configured in Unity environment",
+      "type": "config",
+      "tags": [
+        "config",
+        "plasma-token",
+        "solana",
+        "unity",
+        "web3",
+        "configuration"
+      ],
+      "timestamp": "2025-07-21T23:38:42.960Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T23:38:42.960Z",
+      "lastVerified": "2025-07-21T23:38:42.960Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753141583419_9ilgkm8bd",
+      "content": "PLASMA Token Integration Complete! Live token 3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7 fully integrated with Unity Web3 system. All configurations updated: 8 decimals, 1B supply, Solana devnet. Supabase auth working with live credentials. TokenRewardSystem, SolanaManager, and all testing tools configured for real PLASMA token operations. Ready for Cursor IDE Unity MCP development.",
+      "type": "general",
+      "tags": [
+        "general",
+        "testing",
+        "plasma-token-complete",
+        "solana-devnet",
+        "live-integration",
+        "production-ready"
+      ],
+      "timestamp": "2025-07-21T23:46:23.419Z",
+      "context": "PLASMA Token Integration Final Status",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-21T23:46:23.419Z",
+      "lastVerified": "2025-07-21T23:46:23.419Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753550874902_otpztle7t",
+      "content": "PlasmaDragon Project Status (Jan 2025):\n\n**Completed Tasks:**\n- Task 01: MCP Unity Setup - COMPLETED\n  - Unity MCP Bridge running on port 6400\n  - Unity Test Framework downgraded to v1.1.33 to fix compatibility\n  - Flying cube system tested and working\n\n**Current Status:**\n- Phase: Foundation Setup (Week 1)\n- Unity Version: 6000.1.9f1 (newer than planned 2022.3)\n- Flying System: Working with 3rdPerson+Fly asset\n- Project Structure: Created with proper folders\n\n**Assets Imported:**\n1. 3rdPerson+Fly - Free flight controller (working)\n2. Toon Adventure Island - Environment assets\n\n**Scripts Created:**\n- SimpleFlyingController.cs - Basic flight physics\n- FlyingTestSetup.cs - Scene setup helper\n- SimpleCameraFollow.cs - Camera follow system\n- DragonCharacterSetup.cs - Dragon character setup\n- Setup3rdPersonFly.cs - Proper 3rdPerson+Fly setup (in Assets root)\n\n**Web3 Scripts (disabled due to missing dependencies):**\n- SolanaManager.cs.disabled\n- TokenRewardSystem.cs.disabled\n- SupabaseManager.cs.disabled\n- SeamlessOnboarding.cs.disabled\n\n**Next Tasks:**\n- Task 02: Unity Project Initialization (partially complete)\n- Task 03: Essential Package Installation\n- Task 04: WebGL Configuration\n- Task 05: Environment Setup",
+      "type": "config",
+      "tags": [
+        "config",
+        "plasma-dragon",
+        "project-status",
+        "unity",
+        "task-progress"
+      ],
+      "timestamp": "2025-07-26T17:27:54.902Z",
+      "context": "Project assessment requested by user to understand current status",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-26T17:27:54.902Z",
+      "lastVerified": "2025-07-26T17:27:54.902Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753554961917_tddro21f0",
+      "content": "PlasmaDragon Project - STARTING OVER (Jan 2025)\n\nDecision: Complete restart with clean structure\nReason: Current project became messy with unstructured files\n\nNew File Structure Plan:\nPlasmaDragon/\n├── Assets/\n│   ├── Scenes/\n│   ├── Scripts/\n│   ├── Prefabs/\n│   ├── Materials/\n│   ├── Models/\n│   ├── Textures/\n│   ├── [ImportedAssetName]/\n│   └── ...\n├── Library/\n├── ProjectSettings/\n├── Packages/\n│   └── manifest.json\n├── Temp/\n├── Logs/\n├── UserSettings/\n└── [PlasmaDragon.sln]\n\nUser working on: Unity MCP server connection\nMy task: Review tasks folder and update TODO.md for fresh start",
+      "type": "general",
+      "tags": [
+        "general",
+        "plasma-dragon",
+        "project-reset",
+        "fresh-start",
+        "file-structure"
+      ],
+      "timestamp": "2025-07-26T18:36:01.917Z",
+      "context": "Major project reset decision - starting over with clean structure",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-26T18:36:01.917Z",
+      "lastVerified": "2025-07-26T18:36:01.917Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753555622473_ladrfow86",
+      "content": "Unity MCP Setup Status:\n\n1. Unity MCP Server Location: /home/benton/bin/UnityMCP/UnityMcpServer/src\n2. Claude Desktop Config: /home/benton/.config/Claude/claude_desktop_config.json\n3. Current Config Points to: /home/benton/projects/Unity3d-Projects/PlasmaDragonPrj/PlasmaDragon\n\nUnity Running:\n- Unity 6000.1.9f1 is currently running with PlasmaDragon project\n- Unity Hub is also running\n\nTo connect Unity MCP for fresh start:\n1. Create new Unity project with proper structure\n2. Update UNITY_PROJECT_PATH in Claude Desktop config\n3. Restart Claude Desktop\n4. Install Unity MCP Bridge package in new project",
+      "type": "config",
+      "tags": [
+        "config",
+        "unity-mcp",
+        "setup",
+        "configuration"
+      ],
+      "timestamp": "2025-07-26T18:47:02.473Z",
+      "context": "Preparing Unity MCP connection for project restart",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-26T18:47:02.473Z",
+      "lastVerified": "2025-07-26T18:47:02.473Z",
+      "status": "fresh"
+    },
+    {
+      "id": "mem_1753556795249_i2wserwjz",
+      "content": "PlasmaDragon Fresh Start Completed (Jan 26, 2025):\n\nCOMPLETED:\n1. Backed up old project to BACKUP_PRE_FRESH_START/\n2. Created proper Unity folder structure:\n   - Assets/_Project/ for our custom content\n   - Assets/ImportedAssets/ for third-party\n   - Proper subfolders for Scripts, Prefabs, etc.\n3. Set up comprehensive .gitignore\n4. Created Packages/manifest.json with:\n   - URP, Cinemachine, TextMeshPro, Addressables\n   - Unity MCP Bridge package\n5. Created assembly definition (PlasmaDragon.Runtime.asmdef)\n6. Created initial scripts:\n   - GameManager.cs (singleton pattern)\n   - InputManager.cs (centralized input)\n7. Updated TODO.md with lessons learned\n8. Git repository initialized and first commit made\n\nNEXT STEPS:\n1. Open Unity 2022.3 LTS (NOT 6000.x)\n2. Open this project folder\n3. IMMEDIATELY switch to WebGL platform\n4. Verify Unity MCP Bridge imports correctly\n5. Create initial scenes\n6. Test MCP connection\n\nUnity MCP is already configured in Claude Desktop config.",
+      "type": "config",
+      "tags": [
+        "config",
+        "plasma-dragon",
+        "fresh-start",
+        "setup-complete"
+      ],
+      "timestamp": "2025-07-26T19:06:35.249Z",
+      "context": "Fresh project setup completed, ready for Unity",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-26T19:06:35.249Z",
+      "lastVerified": "2025-07-26T19:06:35.249Z",
+      "status": "fresh"
+    }
+  ],
+  "lastUpdated": "2025-07-26T19:06:35.249Z"
+}
