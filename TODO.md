@@ -18,14 +18,20 @@ The previous attempt became cluttered with:
 - [x] Created assembly definition (PlasmaDragon.Runtime.asmdef)
 - [x] Initialized Git repository
 - [x] Created initial core scripts (GameManager, InputManager)
+- [x] Opened project in Unity 6.0 LTS (latest stable)
+- [x] Switched to WebGL platform
+- [x] Created testFlight_001 scene with working flying cube
+- [x] Pushed to GitHub: https://github.com/Agentic-Person/PlasmaDragon
 
-### 📋 **Immediate Next Steps**
-1. [ ] Open Unity 2022.3 LTS (not 6000.x)
-2. [ ] Create new project using this folder structure
-3. [ ] **IMMEDIATELY switch to WebGL platform**
-4. [ ] Verify Unity MCP Bridge package imports correctly
-5. [ ] Create initial scenes (MainMenu, Level01_FortressIsland, TestScene)
-6. [ ] Test MCP connection with simple commands
+### 📋 **Immediate Next Steps (Dragon First Approach)**
+1. [x] ~~Open Unity 6.0 LTS~~ ✅ Done
+2. [x] ~~Switch to WebGL platform~~ ✅ Done
+3. [x] ~~Basic flying cube working~~ ✅ Done
+4. [ ] **PRIORITY: Import/Purchase Dragon Model**
+5. [ ] Replace flying cube with dragon model
+6. [ ] Test flight controls with dragon (ensure smooth movement)
+7. [ ] THEN import environment assets (castle/island)
+8. [ ] Test Unity MCP connection with commands
 
 ### 🏗️ **Project Structure (Best Practices)**
 ```
@@ -48,20 +54,21 @@ PlasmaDragon/
 ## 📚 **Lessons Learned**
 1. **Always create folder structure BEFORE importing any assets**
 2. **Switch to WebGL platform immediately after project creation**
-3. **Use Unity 2022.3 LTS for stability (not experimental versions)**
+3. **Unity 6.0 LTS is stable** - no need to downgrade to 2022.3
 4. **Keep custom code in _Project folder, imported assets separate**
 5. **Use assembly definitions for better compilation times**
 6. **Test WebGL builds weekly to catch issues early**
+7. **Dragon model first** - better for visual impact and scale reference
 
 ## 🎮 **Development Phases (Updated)**
 
 ### Phase 1: Foundation (Week 1) - IN PROGRESS
 - [x] Project structure setup
 - [x] Git initialization
-- [ ] Unity project creation in 2022.3 LTS
-- [ ] WebGL platform configuration
+- [x] Unity project creation in 6.0 LTS
+- [x] WebGL platform configuration
 - [ ] Unity MCP integration test
-- [ ] Basic scene setup
+- [x] Basic scene setup (testFlight_001 with flying cube)
 - [ ] Import and organize purchased assets
 
 ### Phase 2: Core Gameplay (Week 2)
@@ -104,7 +111,7 @@ PlasmaDragon/
 - [ ] Load time < 20 seconds
 
 ## 🛠️ **Technical Stack**
-- **Unity Version**: 2022.3 LTS (NOT 6000.x)
+- **Unity Version**: 6.0 LTS (latest stable)
 - **Render Pipeline**: URP (for WebGL performance)
 - **Platform**: WebGL
 - **MCP Integration**: justinpbarnett/unity-mcp
@@ -121,8 +128,8 @@ PlasmaDragon/
 
 ## 🚨 **Critical Reminders**
 1. **DO NOT** import assets directly into Assets/ root
-2. **DO NOT** forget to switch to WebGL platform
-3. **DO NOT** use Unity 6000.x (use 2022.3 LTS)
+2. **DO NOT** forget to switch to WebGL platform (already done!)
+3. **DO** use Unity 6.0 LTS (current stable version)
 4. **DO NOT** mix custom code with imported assets
 5. **ALWAYS** test MCP commands after Unity restarts
 
