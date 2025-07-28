@@ -58,7 +58,16 @@ namespace PlasmaDragon
         
         private void FindTarget()
         {
-            // Look for the test cube first
+            // Look for the dragon model first (Unka Toon)
+            GameObject dragon = GameObject.Find("Unka Toon");
+            if (dragon != null)
+            {
+                target = dragon.transform;
+                Debug.Log("🐉 Camera found dragon target: " + target.name);
+                return;
+            }
+            
+            // Look for the test cube second
             GameObject testCube = GameObject.Find("🎯 MCP Test Cube");
             if (testCube != null)
             {
@@ -73,7 +82,22 @@ namespace PlasmaDragon
             {
                 target = flightController.transform;
                 Debug.Log("🎯 Camera found flight controller target: " + target.name);
+                return;
             }
+            
+            // Last resort: Look for any GameObject with "dragon" in the name (case insensitive)
+            GameObject[] allObjects = FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in allObjects)
+            {
+                if (obj.name.ToLower().Contains("dragon") || obj.name.ToLower().Contains("unka"))
+                {
+                    target = obj.transform;
+                    Debug.Log("🔍 Camera found dragon-like target: " + target.name);
+                    return;
+                }
+            }
+            
+            Debug.LogWarning("❌ No suitable target found! Please ensure dragon has BasicFlightController component.");
         }
         
         private void SetInitialPosition()

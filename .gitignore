@@ -87,3 +87,13 @@ mcp-unity-config.json
 # Backup folders
 BACKUP_*
 *_OLD_BACKUP
+
+# SECURITY: Block all sensitive files
+.env*
+!.env.example
+!.env.template
+.Solana
+*.key
+*.pem
+secrets/
+config/local.*

@@ -31,7 +31,7 @@ namespace PlasmaDragon
             }
             else
             {
-                Debug.LogError("❌ BasicFlightController NOT found! Add it to the test cube.");
+                Debug.LogError("❌ BasicFlightController NOT found! Add it to the dragon or test cube.");
             }
             
             // Check for camera follow
@@ -45,26 +45,58 @@ namespace PlasmaDragon
                 Debug.LogError("❌ CameraFollow NOT found! Add it to Main Camera.");
             }
             
-            // Check for test cube
-            var testCube = GameObject.Find("🎯 MCP Test Cube");
-            if (testCube != null)
+            // Check for dragon model
+            var dragon = GameObject.Find("Unka Toon");
+            if (dragon != null)
             {
-                Debug.Log("✅ Test cube found: " + testCube.name);
+                Debug.Log("🐉 Dragon model found: " + dragon.name);
                 
-                // Check components on test cube
-                var rb = testCube.GetComponent<Rigidbody>();
+                // Check components on dragon
+                var rb = dragon.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    Debug.Log("✅ Rigidbody found on test cube");
+                    Debug.Log("✅ Rigidbody found on dragon");
                 }
                 else
                 {
-                    Debug.LogWarning("⚠️ Rigidbody missing from test cube - add it!");
+                    Debug.LogWarning("⚠️ Rigidbody missing from dragon - add it for flight controls!");
+                }
+                
+                var flightCtrl = dragon.GetComponent<BasicFlightController>();
+                if (flightCtrl != null)
+                {
+                    Debug.Log("✅ BasicFlightController found on dragon");
+                }
+                else
+                {
+                    Debug.LogWarning("⚠️ BasicFlightController missing from dragon - add it for flight!");
                 }
             }
             else
             {
-                Debug.LogError("❌ Test cube not found!");
+                Debug.LogWarning("⚠️ Dragon model 'Unka Toon' not found - checking for test cube...");
+                
+                // Check for test cube
+                var testCube = GameObject.Find("🎯 MCP Test Cube");
+                if (testCube != null)
+                {
+                    Debug.Log("✅ Test cube found: " + testCube.name);
+                    
+                    // Check components on test cube
+                    var rb = testCube.GetComponent<Rigidbody>();
+                    if (rb != null)
+                    {
+                        Debug.Log("✅ Rigidbody found on test cube");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("⚠️ Rigidbody missing from test cube - add it!");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("❌ Neither dragon nor test cube found!");
+                }
             }
             
             Debug.Log("🔍 === SYSTEM DIAGNOSTIC COMPLETE ===");
