@@ -1,0 +1,20 @@
+{
+    "name": "PlasmaDragon.Runtime",
+    "rootNamespace": "PlasmaDragon",
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.Cinemachine",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
