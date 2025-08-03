@@ -33,7 +33,7 @@ Create a portfolio demonstration that showcases the seamless integration of trad
 
 ### Primary: Casual Web2 Gamer
 - **Age**: 18-35
-- **Technical Level**: Low
+- **Technical Level**: Mid
 - **Goals**: Play fun arcade games
 - **Pain Points**: Complicated game mechanics
 - **Success**: "This is fun! Wait, I earned real money?"
